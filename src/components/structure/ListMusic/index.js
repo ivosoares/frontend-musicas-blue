@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Card from '../Card';
-
+import Api from '../../../api/api';
 // Ele vai fazer uma requisicao para a API(/musicas) e vai listar em varios card.
 const ListMusic = () => {
   // estado - memoria do componente
@@ -18,7 +18,7 @@ const ListMusic = () => {
   // }, [count])
 
   const getMusicas = async () => {
-    const request = await fetch('http://localhost:3001/musicas')
+    const request = await Api.fetchGetAll();
     // data = recebe os dados da api (musicas).
     const data = await request.json();
     // atualizo meu estado em memoria com as musicas - para atualizar no DOM.

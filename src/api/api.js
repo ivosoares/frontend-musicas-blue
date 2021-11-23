@@ -1,5 +1,5 @@
 const Api = {
-  apiUrl: 'http://localhost:3001/musicas',
+  apiUrl: 'https://backend-musicas-blue.herokuapp.com/musicas',
   fetchGetAll: () => fetch(Api.apiUrl),
   fetchGetById: (id) => fetch(`${Api.apiUrl}/${id}`),
   fetchPost: (data) => {
